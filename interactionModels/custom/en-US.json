@@ -1,0 +1,188 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "dark master",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "critical_hit",
+          "slots": [
+            {
+              "name": "type",
+              "type": "critical_tables",
+              "samples": [
+                "give me a {type} critical strike",
+                "give me a {type} critical",
+                "{type} critical strike",
+                "{type} critical",
+                "i want a {type} critical",
+                "the table is {type}"
+              ]
+            },
+            {
+              "name": "severity",
+              "type": "critical_severity",
+              "samples": [
+                "{severity} strike",
+                "{severity}",
+                "severity is {severity}"
+              ]
+            }
+          ],
+          "samples": [
+            "give me a {severity} critical",
+            "generate a {severity} critical",
+            "roll in the {type} critical strike table with {severity} severity ",
+            "generate a fatal {type} strike of severity {severity}",
+            "roll in the {type} critical strike table with severity {severity}",
+            "give me a critical strike of type {type}",
+            "i want a {type} critical strike",
+            "generate a {type}  critical strike",
+            "give me a  {type}  critical strike ",
+            "{type} critical strike"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "lethal"
+              }
+            },
+            {
+              "name": {
+                "value": "grievous"
+              }
+            },
+            {
+              "name": {
+                "value": "moderate"
+              }
+            },
+            {
+              "name": {
+                "value": "light"
+              }
+            },
+            {
+              "name": {
+                "value": "superficial"
+              }
+            }
+          ],
+          "name": "critical_severity"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "fire"
+              }
+            },
+            {
+              "name": {
+                "value": "pierce"
+              }
+            },
+            {
+              "name": {
+                "value": "cut"
+              }
+            },
+            {
+              "name": {
+                "value": "impact"
+              }
+            }
+          ],
+          "name": "critical_tables"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "critical_hit",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "type",
+              "type": "critical_tables",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.960608569947.1309699766443"
+              }
+            },
+            {
+              "name": "severity",
+              "type": "critical_severity",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.829052788365.617107846498"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.960608569947.1309699766443",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "If you don\u0027t specify a type of critical strike, I will have your soul"
+          },
+          {
+            "type": "PlainText",
+            "value": "You will specify the type of critical strike or I will erase your future"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.829052788365.617107846498",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You can either tell me the severity or get nothing"
+          },
+          {
+            "type": "PlainText",
+            "value": "I need to know how severe the critical strike is"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "9"
+}

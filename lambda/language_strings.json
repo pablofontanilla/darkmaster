@@ -1,0 +1,27 @@
+{
+	"en": {
+		"SKILL_NAME": "Dark Master",
+		"GET_CRITICAL_MESSAGE": "Here's your critical hit: {}",
+		"HELP_MESSAGE": "You can say generate a critical hit or give me a critical hit, or, you can say exit... What will you do?",
+		"HELP_REPROMPT": "This is getting tiresome. What do you want?",
+		"FALLBACK_MESSAGE": "The Dark Master can't be bothered with that.  It can critical hit your enemies if you say generate a critical hit. What do you want, weakling?",
+		"FALLBACK_REPROMPT": "You're bothering me, puny human. What do you want?",
+		"ERROR_MESSAGE": "Sorry, something went wrong in Mordor.",
+		"STOP_MESSAGE": "You'd better not come back again",
+		"CRITICALS": [
+			"Your sword decapitates your enemy",
+			"Your firebolt incinerates your enemy",
+			"Your bolt pierces your enemy's skull"
+		],
+		"ROLL_MESSAGE": "You rolled a {}."
+	},
+	"en-AU": {
+		"SKILL_NAME": "Dark Master from down under"
+	},
+	"en-CA": {
+		"SKILL_NAME": "Polite Dark Master"
+	},
+	"en-GB": {
+		"SKILL_NAME": "Proper Dark Master"
+	}
+}
